@@ -8,19 +8,21 @@
 
         <head>
             <meta charset="utf-8">
-            <title>'.$title.'</title>
-            <!--<link type="text/css" rel="stylesheet" media="screen" href="/asset/css/style.css">-->';
+            <title>'.$title.'</title>';
     if($ua['name'] == 'Mozilla Firefox') {
 //        foreach($styles as $file => $type) {
         $style = Assets_Css_Style::render();
-            $body .= '<style>' . $style . '</style>';
+        $body .= '<style>' . $style . '</style>';
 //        }
     }
     else {
-        foreach($styles as $file => $type) {
-            $body .= HTML::style($file, array('media' => $type));
-        }
+    	$body .=  '<link type="text/css" rel="stylesheet" media="screen" href="/asset/css/style.css">';
     }
+//    else {
+//        foreach($styles as $file => $type) {
+//            $body .= HTML::style($file, array('media' => $type));
+//        }
+//    }
 
     foreach($scripts as $file) {
         $body .= HTML::script($file);
