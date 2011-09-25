@@ -27,7 +27,23 @@
     foreach($scripts as $file) {
         $body .= HTML::script($file);
     }
+$string = '';
+$default = Database::instance();
+$rand = rand(0, 100);
+$query = DB::query(Database::INSERT, 'INSERT INTO hockeygame.user (user_name) VALUES (:user_name)');
+ 
+$query->parameters(array(
+    ':user_name' => $rand,
+));
 
+$query->execute();
+
+$query = DB::query(Database::SELECT, 'SELECT * FROM hockeygame.user');
+$result = $query->execute();
+foreach ($result as $user){
+	$string .= $user['id'];
+}
+unset($default);
     $body .= '</head>
         <body>
             <div id="main_container">
@@ -40,7 +56,7 @@
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/photos">Photos</a></li>
                     <li><a href="/videos">Videos</a></li>
-                </ul>'.
+                </ul>'.'<h2>'.$string.'</h2>'.
                 $content.
 $yourbrowser
             .'</div>
