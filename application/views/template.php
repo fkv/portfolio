@@ -8,7 +8,9 @@
 
         <head>
             <meta charset="utf-8">
-            <title>'.$title.'</title>';
+            <title>'.$title.'</title>
+            <link type="text/css" rel="stylesheet" media="screen" href="http://kohanarsrc.fredmadeit.com/css/style.css">';
+/*
     if($ua['name'] == 'Mozilla Firefox') {
 //        foreach($styles as $file => $type) {
         $style = Assets_Css_Style::render();
@@ -23,7 +25,7 @@
 //            $body .= HTML::style($file, array('media' => $type));
 //        }
 //    }
-
+*/
     foreach($scripts as $file) {
         $body .= HTML::script($file);
     }
