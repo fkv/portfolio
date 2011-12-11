@@ -1,0 +1,48 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: helvetica, century gothic, Arial Narrow, Sans-serif;
+}
+#main_container{
+    width: 900px;
+    margin: 0 auto;
+    background-color: purple;
+}
+#main_nav{
+    list-style-type: none;
+    padding: 0 0 20px;
+}
+#main_nav li{
+    float: right;
+    text-decoration: none;
+    padding-left: 30px;
+}
+#nav_logo{
+	float: left !important;
+	margin: 0px;
+	padding: 0px !important;
+	font-size:20px;
+	font-family:"league-gothic-1", Arial Narrow, Sans-serif;
+}
+#nav_logo a{
+	text-decoration: none;	
+}
+.medium_grey, .big_grey{
+	font-family:"league-gothic-1", Arial Narrow, Sans-serif;
+}
+.medium_grey{
+	color: #cbcbcb;
+	font-size: 20px;
+}
+.big_grey{
+	color: #696969;
+	font-size: 36px;
+}
+.bottom_box{
+	width: 300px;
+	height: 300px;
+	background-color: orange;
+	float: left;
+}

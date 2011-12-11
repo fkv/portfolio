@@ -1,6 +1,6 @@
 <?php
-    $ua = getbrowser::getInfo();
-    $yourbrowser= "Your browser: " . $ua['name'] . " " . $ua['version'] . " on " .$ua['platform'] . " reports: <br >" . $ua['userAgent'];
+//    $ua = getbrowser::getInfo();
+//    $yourbrowser= "Your browser: " . $ua['name'] . " " . $ua['version'] . " on " .$ua['platform'] . " reports: <br >" . $ua['userAgent'];
     $body = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -29,9 +29,10 @@
     foreach($scripts as $file) {
         $body .= HTML::script($file);
     }
+/*
 $string = '';
 $default = Database::instance();
-$rand = rand(0, 100);
+$rand = rand(0, 1000);
 $query = DB::query(Database::INSERT, 'INSERT INTO hockeygame.user (user_name) VALUES (:user_name)');
  
 $query->parameters(array(
@@ -46,22 +47,21 @@ foreach ($result as $user){
 	$string .= $user['id'];
 }
 unset($default);
+*/
     $body .= '</head>
         <body>
             <div id="main_container">
                 <ul id="main_nav">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/about_us">About Us</a></li>
-                    <li><a href="/lion_dance">Lion Dance</a></li>
-                    <li><a href="/events">Events</a></li>
-                    <li><a href="/join_us">Join Us</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="/photos">Photos</a></li>
-                    <li><a href="/videos">Videos</a></li>
-                </ul>'.'<h2>'.$string.'</h2>'.
-                $content.
-$yourbrowser
-            .'</div>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li id="nav_logo">
+						<a href="/home">fredmadeit.com</a>
+					</li>
+                </ul>'
+                .$content.
+			'</div>
         </body>
     </html>';
     echo $body;

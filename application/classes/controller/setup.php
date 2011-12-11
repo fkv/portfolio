@@ -14,15 +14,13 @@ class Controller_Setup extends Controller_Template
       {
           parent::before();
   
-  	    if ($this->auto_render)
-  	    {
+		  if ($this->auto_render)
+  	      {
   	    	// Initialize empty values
   	    	$this->template->title   = '';
   	    	$this->template->content = '';
-  			
-  		$this->template->styles = array();
-  		$this->template->scripts = array();
-          			
+  			$this->template->styles = array();
+  			$this->template->scripts = array();
           }
       }
   	
@@ -34,20 +32,20 @@ class Controller_Setup extends Controller_Template
        */
       public function after()
       {
-	if ($this->auto_render)
-	{
-		$styles = array(
-			'asset/css/style.css' => 'screen',
-		);
-  
-		$scripts = array(
-			'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
-		);
-		
-		$this->template->styles = array_merge( $this->template->styles, $styles );
-		$this->template->scripts = array_merge( $this->template->scripts, $scripts );
-	}
-	parent::after();
+		if ($this->auto_render)
+		{
+			$styles = array(
+				'asset/css/style.css' => 'screen',
+			);
+	  
+			$scripts = array(
+				'https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js',
+			);
+			
+			$this->template->styles = array_merge( $this->template->styles, $styles );
+			$this->template->scripts = array_merge( $this->template->scripts, $scripts );
+		}
+		parent::after();
     }
 }
 ?>
