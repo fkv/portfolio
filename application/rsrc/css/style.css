@@ -19,7 +19,7 @@ body{
     margin: 0;
     width: 100%;
     height: 100%;
-    font-family: 'HelveticaNeueLight', Helvetica, Arial, Sans-serif;
+    font-family: century gothic, Helvetica, Arial, Sans-serif;
     background-color: #EFF5FB;
 }
 #main_container{
@@ -37,8 +37,6 @@ body{
 }
 #main_nav li a{
 	color: #000;
-	font-family: arial, sans-serif;
-	font-weight: bold;
     text-decoration: none;
 }
 #nav_logo{
@@ -46,22 +44,42 @@ body{
 	margin: 0px;
 	padding: 0px !important;
 	font-size:20px;
-	font-family: arial, sans-serif;
 }
 #nav_logo a{
 	text-decoration: none;	
 }
-.medium_grey{
+.medium_grey1{
 	color: #707070;
-	font-size: 30px;
-}
-.big_grey{
-	color: #404040;
 	font-size: 36px;
 }
+.big_grey1{
+	color: #404040;
+	font-size: 42px;
+}
+.medium_grey2{
+	color: #707070;
+	font-size: 52px;
+}
+.big_grey2{
+	color: #404040;
+	font-size: 58px;
+}
 .bottom_box{
-	width: 300px;
+	width: 266px;
 	height: 300px;
-	background-color: orange;
 	float: left;
+	padding-right: 50px;
+}
+.bottom_box_last{
+	padding: 0;	
+}
+.bottom_box_title{
+	font-family: century gothic, Helvetica, Arial, Sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+	color: #404040;
+}
+.bottom_box_content{
+	padding-top: 10px;
+	line-height: 24px;
 }
