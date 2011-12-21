@@ -68,10 +68,10 @@ body{
 	width: 266px;
 	height: 300px;
 	float: left;
-	padding-right: 50px;
+	padding: 30px 50px 0 0;
 }
 .bottom_box_last{
-	padding: 0;	
+	padding: 30px 0 0 0;
 }
 .bottom_box_title{
 	font-family: century gothic, Helvetica, Arial, Sans-serif;

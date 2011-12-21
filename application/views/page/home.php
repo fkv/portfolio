@@ -24,6 +24,6 @@
 <div class='bottom_box bottom_box_last'>
 	<div class='bottom_box_title'>Get in touch</div>
 	<div class='bottom_box_content'>
-		vuong.fred@gmail.com
+		info@fredmadeit.com
 	</div>
 </div>
